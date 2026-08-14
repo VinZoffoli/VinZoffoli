@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 6" width="1200" height="6" role="presentation">
+  <defs><path id="r" d="M0 3 H1200" pathLength="1000"/></defs>
+  <style>
+    .base  { stroke: #DB1B34; stroke-width: 1; opacity: .32; }
+    .glint { stroke: #DB1B34; stroke-width: 2.2; stroke-linecap: round;
+             stroke-dasharray: 80 920; stroke-dashoffset: 1000;
+             animation: slide 6s cubic-bezier(.5,0,.5,1) infinite; }
+    .spark { stroke: #FFFFFF; stroke-width: 2.2; stroke-linecap: round;
+             stroke-dasharray: 22 978; stroke-dashoffset: 1000; opacity: .9;
+             animation: slide 6s cubic-bezier(.5,0,.5,1) infinite; }
+    @keyframes slide { to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .glint, .spark { display: none; } }
+  </style>
+  <use class="base"  href="#r"/>
+  <use class="glint" href="#r"/>
+  <use class="spark" href="#r"/>
+</svg>

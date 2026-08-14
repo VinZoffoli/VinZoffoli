@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-label="Vincenzo Zoffoli — Frontend UI/UX Developer. ViperTech CR and Resto Experience. Costa Rica.">
+  <title>Vincenzo Zoffoli — Frontend UI/UX Developer · ViperTech CR · Resto Experience</title>
+
+  <defs>
+    <pattern id="scales" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M17 3 L31 17 L17 31 L3 17 Z" fill="none" stroke="#E2E2DC" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#fff" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#fff" stop-opacity="0.28"/>
+      <stop offset="1"    stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="fademask"><rect width="1200" height="380" fill="url(#fade)"/></mask>
+    <radialGradient id="glowg" cx="0.18" cy="0.42" r="0.62">
+      <stop offset="0" stop-color="#DB1B34" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#DB1B34" stop-opacity="0"/>
+    </radialGradient>
+    <path id="viperPath" d="M -40 272 C 130 272 170 240 320 246 C 470 252 500 302 660 288 C 820 274 860 236 1010 246 C 1130 254 1180 274 1240 268" pathLength="1000"/>
+    <path id="restoPath" d="M -40 290 C 130 290 170 258 320 264 C 470 270 500 320 660 306 C 820 292 860 254 1010 264 C 1130 272 1180 292 1240 286" pathLength="1000"/>
+  </defs>
+
+  <style>
+    .bg     { fill: #F7F7F5; }
+    .eyebrow{ font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+               font-size: 15px; letter-spacing: .17em; fill: #14171C; opacity: .62; }
+    .name   { font-family: "Segoe UI", Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+               font-weight: 700; font-size: 58px; letter-spacing: .05em; fill: #14171C; }
+    .role   { font-family: "Segoe UI", Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+               font-weight: 400; font-size: 22px; fill: #14171C; }
+    .orgs   { font-family: "Segoe UI", Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+               font-size: 17px; fill: #5F6670; }
+    .orgs .vt { fill: #DB1B34; font-weight: 700; }
+    .orgs .re { fill: #E1441C; font-weight: 700; }
+    .meta   { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+               font-size: 14px; letter-spacing: .04em; fill: #5F6670; }
+    .geo    { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+               font-size: 13px; letter-spacing: .1em; fill: #14171C; opacity: .42; }
+
+    .rise   { opacity: 0; animation: rise .85s cubic-bezier(.16,.84,.3,1) forwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(16px); }
+                       to   { opacity: 1; transform: translateY(0); } }
+    .d1 { animation-delay: .15s } .d2 { animation-delay: .45s }
+    .d3 { animation-delay: .80s } .d4 { animation-delay: 1.05s }
+    .d5 { animation-delay: 1.55s } .d6 { animation-delay: 1.68s }
+    .d7 { animation-delay: 1.81s } .d8 { animation-delay: 1.94s }
+    .d9 { animation-delay: 2.07s } .d0 { animation-delay: .30s }
+
+    /* signature: two tracks of work, drawn one after the other */
+    .track { fill: none; stroke-width: 2.25; stroke-linecap: round;
+              stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+    .t-viper { stroke: #DB1B34; animation: draw 2.3s cubic-bezier(.4,0,.2,1) .35s forwards; }
+    .t-resto { stroke: #E1441C; animation: draw 2.3s cubic-bezier(.4,0,.2,1) .70s forwards; opacity: .92; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+
+    /* white light running along the red track, forever */
+    .streak { fill: none; stroke: #FFFFFF; stroke-width: 3.25; stroke-linecap: round;
+               stroke-dasharray: 30 970; stroke-dashoffset: 1000; opacity: 0;
+               animation: run 4.8s linear 2.8s infinite, show .5s linear 2.8s forwards; }
+    @keyframes run  { to { stroke-dashoffset: 0; } }
+    @keyframes show { to { opacity: 1; } }
+
+    .scales-layer { animation: breathe 11s ease-in-out infinite; }
+    @keyframes breathe { 0%,100% { opacity: .48 } 50% { opacity: 1 } }
+
+    .glow { animation: pulse 9s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .55 } 50% { opacity: 1 } }
+
+    .dv { fill: #DB1B34; } .dr { fill: #E1441C; }
+    .hair { stroke: #DB1B34; stroke-width: 1; opacity: .35; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rise  { opacity: 1; transform: none; animation: none; }
+      .track { stroke-dashoffset: 0; animation: none; }
+      .streak { display: none; }
+      .scales-layer, .glow { animation: none; opacity: .8; }
+    }
+  </style>
+
+  <rect class="bg" width="1200" height="380"/>
+  <rect class="glow" width="1200" height="380" fill="url(#glowg)"/>
+  <g mask="url(#fademask)"><rect class="scales-layer" width="1200" height="380" fill="url(#scales)"/></g>
+
+  <text class="eyebrow rise d1" x="72" y="76">// frontend · ui/ux · costa rica</text>
+  <text class="name rise d2"    x="72" y="148">VINCENZO ZOFFOLI</text>
+  <text class="role rise d3"    x="72" y="186">Frontend UI/UX Developer</text>
+
+  <text class="orgs rise d4" x="72" y="216"><tspan class="vt">ViperTech CR</tspan> — co-founder<tspan> &#160;·&#160; </tspan><tspan class="re">Resto Experience</tspan> — restaurants &amp; hospitality</text>
+
+  <text class="geo rise d0" x="1128" y="76" text-anchor="end">10.22° N / 83.79° W</text>
+
+  <use class="track t-viper" href="#viperPath"/>
+  <use class="track t-resto" href="#restoPath"/>
+  <use class="streak"        href="#viperPath"/>
+
+  <g class="rise d5"><circle class="dv" cx="76"  cy="347" r="3.2"/><text class="meta" x="92"  y="352">60+ projects</text></g>
+  <g class="rise d6"><circle class="dv" cx="246" cy="347" r="3.2"/><text class="meta" x="262" y="352">15 countries</text></g>
+  <g class="rise d7"><circle class="dv" cx="416" cy="347" r="3.2"/><text class="meta" x="432" y="352">#1 on Workana</text></g>
+  <g class="rise d8"><circle class="dr" cx="594" cy="347" r="3.2"/><text class="meta" x="610" y="352">20+ restaurant sites</text></g>
+  <g class="rise d9"><circle class="dv" cx="830" cy="347" r="3.2"/><text class="meta" x="846" y="352">5.0 on Google</text></g>
+
+  <line class="hair" x1="0" y1="378.5" x2="1200" y2="378.5"/>
+</svg>
